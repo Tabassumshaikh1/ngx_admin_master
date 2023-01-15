@@ -1,0 +1,32 @@
+<div class="lists row">
+  <div class="col-md-12 col-lg-6 col-xxxl-6">
+    <nb-card class="list-card" id="a1">
+      <nb-card-header>Types of users</nb-card-header>
+      <nb-card-body>
+        <div>
+          <select [(ngModel)]="data">
+          
+              <option value="">Choose Category</option>
+              <option *ngFor="let cat of role">
+                {{cat}}
+              </option>
+            </select>
+          
+          </div>
+       
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div class="col-md-12 col-lg-6 col-xxxl-6">
+    <nb-card class="list-card" size="small">
+      <nb-card-header>Users accoriding to its role</nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let use of user | pipes : data : 'role' ">
+          <nb-user [name]="use.name" [title]="use.email">
+          </nb-user>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>
+</div>

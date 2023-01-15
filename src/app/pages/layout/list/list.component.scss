@@ -1,0 +1,19 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .list-card {
+    nb-card-header {
+      border-bottom: none;
+    }
+
+    nb-card-body {
+      padding: 0;
+      margin-left:20px
+    }
+  }
+  .list-card#a1{
+    display: flex;
+    height: 230px;
+    flex-direction: column;
+}
+}
